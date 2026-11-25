@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>hof/one · Intelligence, built in</title>
-<meta name="description" content="hof/one builds premium AI software for business: ERP, CRM, Books, HR and custom platforms, with AI Copilot calling and AI Mesh across all of it.">
+<title>hof/one · Building the next generation of intelligent products</title>
+<meta name="description" content="Premium AI-native software for businesses: ERP, CRM, Books, HRMS and Mesh, plus custom development and platforms, and a world-class AI Calling Copilot.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/halo.webp">
+<link rel="preload" as="image" href="img/figure.jpg">
 <style>
 :root{--ink:#1F1F1F;--mute:#717173;--soft:#F4F4F5;--line:#E7E7EA;--black:#000;--ease:cubic-bezier(.22,1,.36,1);--g:max(24px,4.4vw)}
 *{box-sizing:border-box;min-width:0}
@@ -65,12 +65,16 @@ p{margin:0}
 .intro{position:relative;height:100vh;height:100svh;min-height:680px;overflow:hidden;background:#000}
 .sheet{position:absolute;inset:0;background:#fff;z-index:1;clip-path:inset(100% 4% 0 4% round 40px);transition:clip-path 1.05s var(--ease)}
 .go .sheet{clip-path:inset(0 0 0 0 round 0)}
-.photo{position:absolute;z-index:3;top:0;left:0;width:100%;height:100%;border-radius:0;overflow:hidden;background:#000 url(img/halo.webp) 50% 36%/cover no-repeat;transition:top 1.05s var(--ease),left 1.05s var(--ease),width 1.05s var(--ease),height 1.05s var(--ease),border-radius 1.05s var(--ease);will-change:top,left,width,height}
+.photo{position:absolute;z-index:3;top:0;left:0;width:100%;height:100%;border-radius:0;overflow:hidden;background:#0d3b3c url(img/figure.jpg) 50% 30%/cover no-repeat;transition:top 1.05s var(--ease),left 1.05s var(--ease),width 1.05s var(--ease),height 1.05s var(--ease),border-radius 1.05s var(--ease);will-change:top,left,width,height}
 .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.15) 55%,rgba(0,0,0,0)),linear-gradient(0deg,rgba(0,0,0,.45),transparent 40%);transition:opacity 1s var(--ease)}
-.go .photo{top:var(--sy);left:var(--sx);width:var(--sw);height:var(--sh);border-radius:28px;background-position:50% 30%}
+.go .photo{top:var(--sy);left:var(--sx);width:var(--sw);height:var(--sh);border-radius:28px;background-position:50% 40%}
 .go .photo::after{opacity:.35}
-.hero{position:absolute;z-index:4;left:var(--g);top:calc(72px + clamp(40px,9vh,110px));color:#fff;max-width:620px;transition:opacity .5s,transform .9s var(--ease)}
-.hero .sub{color:rgba(255,255,255,.82);margin-top:22px;max-width:450px}
+.hero{position:absolute;z-index:4;left:var(--g);top:calc(72px + clamp(32px,7vh,90px));color:#fff;max-width:min(880px,calc(100vw - 2*var(--g)));transition:opacity .5s,transform .9s var(--ease)}
+.hero h1{font-size:clamp(44px,5.3vw,80px);line-height:1.02}
+.hero .sub{color:rgba(255,255,255,.86);margin-top:24px;max-width:470px}
+.sub2{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:15px;font-weight:500;color:#fff}
+.sub2 i{flex:none;width:8px;height:8px;border-radius:50%;background:#7CF5C4;box-shadow:0 0 0 0 rgba(124,245,196,.6);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(124,245,196,0)}}
 .hero .pill{margin-top:32px}
 .go .hero{opacity:0;transform:translateY(-40px);pointer-events:none}
 .ln{display:block;overflow:hidden;padding-bottom:.08em}.ln>span{display:block;animation:up 1.2s var(--ease) both}.ln:nth-child(2)>span{animation-delay:.1s}
@@ -89,7 +93,7 @@ p{margin:0}
 .go .frame{box-shadow:inset 0 0 0 1.5px rgba(255,255,255,0)}
 .stat{position:absolute;left:0;right:0;bottom:0;padding:18px;display:flex;flex-direction:column;align-items:center;gap:8px;color:#fff;text-align:center}
 .stat small{font-size:13px;opacity:.85}
-.stat strong{font:500 clamp(30px,2.6vw,40px)/1 "Inter Tight",sans-serif;letter-spacing:-.03em}
+.stat strong{font:500 clamp(21px,1.75vw,27px)/1.08 "Inter Tight",sans-serif;letter-spacing:-.025em;text-wrap:balance;max-width:92%}
 .stat .glass{margin-top:6px;border-radius:18px;padding:10px 12px;display:flex;align-items:center;gap:10px;width:100%;text-align:left;font-size:12.5px}
 .stat .glass i{flex:none;width:30px;height:30px;border-radius:50%;background:#fff;color:#000;display:grid;place-items:center;font-style:normal;font-weight:600;font-size:11px}
 .stat .glass b{display:block;font-weight:500;font-size:13px}
@@ -199,15 +203,29 @@ p{margin:0}
 .custom{position:relative;overflow:hidden}
 .custom::before{content:"";position:absolute;inset:0;background:url(img/grain.webp) center/cover;opacity:.32;mix-blend-mode:screen}
 .custom>*{position:relative}
-.coins{display:flex;justify-content:center;gap:clamp(12px,2vw,28px);margin-top:clamp(56px,7vw,88px);perspective:1200px}
-.coin{width:clamp(130px,17vw,240px);aspect-ratio:1;border-radius:50%;position:relative;transform:rotateY(var(--ry,0deg)) translateY(var(--ty,0));transition:transform .2s linear;
-background:radial-gradient(circle at 32% 28%,#fff,#d9d9de 18%,#8d8d94 46%,#e8e8ec 62%,#55555c 88%);box-shadow:0 40px 80px -30px rgba(0,0,0,.9),inset 0 -6px 14px rgba(0,0,0,.35),inset 0 4px 10px rgba(255,255,255,.6)}
-.coin::before{content:"";position:absolute;inset:9%;border-radius:50%;background:conic-gradient(from 200deg,#bdbdc3,#f4f4f6,#8a8a91,#e1e1e5,#9d9da4,#f2f2f4,#bdbdc3);box-shadow:inset 0 2px 6px rgba(0,0,0,.35),0 1px 0 rgba(255,255,255,.7)}
-.coin>span{position:absolute;inset:0;display:grid;place-items:center;text-align:center;font:600 clamp(13px,1.3vw,17px)/1.15 "Inter Tight",sans-serif;letter-spacing:-.01em;color:#2b2b30;text-shadow:0 1px 0 rgba(255,255,255,.7)}
-.coin>span>span{display:block}
 .phone{text-align:left}
-.coin svg{display:block;margin:0 auto 6px;width:clamp(22px,2.4vw,34px);height:auto;stroke:#2b2b30;stroke-width:1.6;fill:none}
-.coin:nth-child(2){margin-top:-24px}
+.coins{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,48px);max-width:980px;margin:clamp(64px,8vw,104px) auto 0;perspective:1400px}
+.cn{margin:0;display:flex;flex-direction:column;align-items:center;text-align:center}
+.cn:nth-child(2){margin-top:-36px}
+.bob{animation:bob 6s ease-in-out infinite;animation-delay:calc(var(--i)*-2s)}
+@keyframes bob{50%{transform:translateY(-12px)}}
+.coin{--d:clamp(150px,19vw,250px);position:relative;width:var(--d);height:var(--d);transform-style:preserve-3d;transform:rotateX(var(--rx,8deg)) rotateY(var(--ry,0deg))}
+.coin .e{position:absolute;inset:0;border-radius:50%;transform:translateZ(calc(var(--z)*-1px));background:repeating-conic-gradient(from 0deg,#5a5a60 0 .7deg,#c4c4ca .7deg 1.4deg);box-shadow:inset 0 0 0 1px rgba(0,0,0,.25)}
+.coin .e:last-of-type{background:radial-gradient(circle,#2f2f34,#151518);box-shadow:0 30px 50px -10px rgba(0,0,0,.85)}
+.face{position:absolute;inset:0;border-radius:50%;overflow:hidden;transform:translateZ(0);
+background:radial-gradient(circle at 50% 50%,transparent 0 63.5%,rgba(0,0,0,.28) 64%,rgba(255,255,255,.55) 65%,transparent 66.5%),
+radial-gradient(circle at 30% 25%,rgba(255,255,255,.55),rgba(255,255,255,0) 45%),
+conic-gradient(from calc(205deg + var(--ry,0deg)*2.4),#85858c,#f8f8fa 9%,#b0b0b7 20%,#66666d 33%,#cfcfd5 46%,#fbfbfc 54%,#8f8f97 67%,#e6e6ea 81%,#85858c);
+box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7),inset 0 0 0 7px rgba(150,150,158,.35),inset 0 12px 20px rgba(255,255,255,.4),inset 0 -16px 26px rgba(0,0,0,.38)}
+.face::before{content:"";position:absolute;inset:0;border-radius:50%;padding:7.5%;background:linear-gradient(calc(150deg + var(--ry,0deg)*2),#fdfdfe,#8b8b92 38%,#e2e2e6 62%,#6c6c73);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask:linear-gradient(#000 0 0) content-box exclude,linear-gradient(#000 0 0);opacity:.9}
+.face::after{content:"";position:absolute;inset:0;border-radius:50%;background:linear-gradient(112deg,transparent 30%,rgba(255,255,255,.75) 47%,rgba(255,255,255,0) 60%) no-repeat;background-size:260% 100%;background-position:var(--sh,50%) 0;mix-blend-mode:soft-light;pointer-events:none}
+.legend{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 .7px 0 rgba(255,255,255,.75))}
+.legend text{font:700 9.4px Inter,sans-serif;letter-spacing:2.2px;fill:rgba(38,38,44,.82)}
+.emb{position:absolute;inset:25%;border-radius:50%;display:grid;place-items:center;background:conic-gradient(from calc(30deg - var(--ry,0deg)*2.4),#9a9aa1,#f3f3f5 14%,#b9b9c0 30%,#7f7f86 46%,#e9e9ec 60%,#a5a5ac 78%,#9a9aa1);box-shadow:0 0 0 1px rgba(0,0,0,.18),0 -1px 1px rgba(255,255,255,.8) inset,0 2px 3px rgba(0,0,0,.35) inset,0 1px 0 rgba(255,255,255,.7)}
+.emb svg{width:56%;height:auto;fill:none;stroke:#2c2c32;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 0 rgba(255,255,255,.9)) drop-shadow(0 -.6px 0 rgba(0,0,0,.35))}
+.cn figcaption{margin-top:30px;max-width:260px}
+.cn figcaption b{display:block;font:500 clamp(18px,1.5vw,22px)/1.2 "Inter Tight",sans-serif;letter-spacing:-.02em;color:#fff}
+.cn figcaption span{display:block;margin-top:6px;font-size:14.5px;line-height:1.45;color:#A3A3A8}
 
 /* ---------- teams ---------- */
 .teams{max-width:1180px;margin:0 auto}
@@ -244,11 +262,11 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 .facts{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:40px}}
 @media(max-width:760px){.cards{--cw:min(62vw,calc((100svh - 400px)*.74))}
 .frame{opacity:0;transition:opacity .5s .55s,box-shadow .6s}.go .frame{opacity:1}
+.photo::after{background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 55%,rgba(0,0,0,.55))}
 .hero{right:var(--g)}
 .screen{grid-template-columns:minmax(0,1fr);min-height:0}.caller{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}.wave{height:80px;margin:28px 0}
 .tpanel{grid-template-columns:minmax(0,1fr)}.tpanel .lead{min-height:0}
-.coin:nth-child(2){margin-top:-12px}
-.coins{gap:8px}.coin{width:calc((100vw - 2*var(--g) - 16px)/3)}.coin>span{font-size:11.5px}
+.coins{gap:10px}.coin{--d:calc((100vw - 2*var(--g) - 20px)/3)}.cn:nth-child(2){margin-top:-16px}.cn figcaption{margin-top:16px}.cn figcaption b{font-size:14px}.cn figcaption span{display:none}.legend text{font-size:10px;letter-spacing:1.6px}
 .toggles{gap:2px;padding:4px}.tg{padding:0 14px;font-size:13.5px}
 .fgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:420px){.tg{padding:0 11px}}
@@ -272,14 +290,15 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 <a href="#products" data-s="1"><b>CRM with Spring</b><span>Leads, deals and an AI agent that follows up</span></a>
 <a href="#products" data-s="2"><b>Books</b><span>A ledger that posts from the source</span></a>
 <a href="#products" data-s="3"><b>Horizon HR</b><span>Attendance, leave and the time clock</span></a>
-<a href="#copilot"><b>AI Copilot</b><span>Calls, notes and follow-ups, written for you</span></a>
-<a href="#mesh"><b>AI Mesh</b><span>WhatsApp, Instagram and Messenger in one inbox</span></a>
+<a href="#copilot"><b>AI Calling Copilot</b><span>Coaching and notes on every sales call</span></a>
+<a href="#mesh"><b>Mesh</b><span>Where all your communication syncs</span></a>
 <a href="#custom"><b>Custom platforms</b><span>AI software built around your process</span></a>
 </div></li>
 <li><button class="top" aria-expanded="false" aria-controls="m-sol">Solutions<svg><use href="#chev"/></svg></button>
 <div class="panel one" id="m-sol"><a href="#teams" data-t="0"><b>Sales</b></a><a href="#teams" data-t="1"><b>HR and people</b></a><a href="#teams" data-t="2"><b>Operations</b></a><a href="#teams" data-t="3"><b>Finance</b></a><a href="#teams" data-t="4"><b>Founders</b></a></div></li>
-<li><a class="top" href="#custom">Custom</a></li>
-<li><a class="top" href="#contact">Company</a></li>
+<li><a class="top" href="#developers">Developers</a></li>
+<li><button class="top" aria-expanded="false" aria-controls="m-co">Company<svg><use href="#chev"/></svg></button>
+<div class="panel one" id="m-co"><a href="#about"><b>About</b></a><a href="#careers"><b>Careers</b></a><a href="#partners"><b>Partners</b></a><a href="#contact"><b>Contact</b></a></div></li>
 </ul>
 <div class="right"><a class="login" href="#signin">Log in</a><a class="pill w" href="#demo">Book a demo</a></div>
 <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></svg></button>
@@ -287,7 +306,7 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 </header>
 <nav class="drawer" id="drawer" aria-label="Mobile" inert>
 <button class="x" id="dx" aria-label="Close menu">×</button>
-<a href="#products">Products</a><a href="#copilot">AI Copilot</a><a href="#mesh">AI Mesh</a><a href="#custom">Custom platforms</a><a href="#teams">Solutions</a><a href="#signin">Log in</a>
+<a href="#products">Products</a><a href="#teams">Solutions</a><a href="#developers">Developers</a><a href="#contact">Company</a><a href="#signin">Log in</a>
 <a class="pill k" href="#demo">Book a demo</a>
 </nav>
 
@@ -299,20 +318,21 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 <div class="t">
 <h2>Every system. One intelligence.</h2>
 <p class="sub">ERP, CRM, Books and HR share one record, so the AI sees the whole business and acts on it.</p>
-<a class="pill k" href="#products">Explore the platform</a>
+<a class="pill k" href="#demo">Book a demo</a>
 </div>
 <div class="cards">
-<div class="card l" style="background-image:url(img/float.webp)"><div class="stat"><small>Books</small><strong>PKR 12M</strong><span class="tag">Invoice paid</span><div class="glass"><i>INV</i><div><b>INV-2201</b><span>Posted to the ledger</span></div></div></div></div>
+<div class="card l" style="background-image:url(img/float.webp)"><div class="stat"><small>CRM</small><strong>The CRM that closes with you.</strong><span class="tag">Deal won · Pearl Heights</span><div class="glass"><i>SP</i><div><b>Spring</b><span>14 follow-ups sent overnight</span></div></div></div></div>
 <div class="slot" id="slot" aria-hidden="true"></div>
-<div class="card r" style="background-image:url(img/tower.webp)"><div class="stat"><small>CRM</small><strong>Won</strong><span class="tag">Pearl Heights</span><div class="glass"><i>SP</i><div><b>Spring</b><span>Quote Q-1042 accepted</span></div></div></div></div>
+<div class="card r" style="background-image:url(img/tower.webp)"><div class="stat"><small>Books</small><strong>World-class accounting for business.</strong><span class="tag">Invoice paid · PKR 12M</span><div class="glass"><i>INV</i><div><b>INV-2201</b><span>Posted to the ledger</span></div></div></div></div>
 </div>
 </div>
-<div class="photo" id="photo" role="img" aria-label="Abstract portrait wrapped in bands of coloured light"></div>
-<div class="frame" aria-hidden="true"><div class="stat"><small>AI Copilot</small><strong>3 actions</strong><span class="tag">Call summarised</span><div class="glass"><i>AR</i><div><b>Ahmed Raza</b><span>Visit booked for Saturday</span></div></div></div></div>
+<div class="photo" id="photo" role="img" aria-label="Sculpted figure made of flowing green and gold lines"></div>
+<div class="frame" aria-hidden="true"><div class="stat"><small>AI Calling Copilot</small><strong>Coaches your team on every call.</strong><span class="tag">Live coaching</span><div class="glass"><i>AR</i><div><b>Tip for Mike</b><span>Ask Ahmed about the March move-in</span></div></div></div></div>
 <div class="hero">
-<h1><span class="ln"><span>Intelligence,</span></span><span class="ln"><span>built in.</span></span></h1>
-<p class="sub fade" style="animation-delay:.3s">hof/one builds premium AI software for business: ERP, CRM, Books, HR and custom platforms, with AI calling and AI Mesh working across all of it.</p>
-<a class="pill w fade" style="animation-delay:.45s" href="#demo">Book a demo</a>
+<h1><span class="ln"><span>Building the next generation</span></span><span class="ln"><span>of intelligent products.</span></span></h1>
+<p class="sub fade" style="animation-delay:.3s">Premium AI-native software for businesses: ERP, CRM, Books, HRMS and Mesh, the platform where all your communication syncs. Plus custom development and platforms, built around you.</p>
+<p class="sub2 fade" style="animation-delay:.4s"><i></i>And a world-class AI Calling Copilot on every call.</p>
+<a class="pill w fade" style="animation-delay:.5s" href="#demo">Book a demo</a>
 </div>
 </section>
 
@@ -425,9 +445,9 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 <p class="sub" data-r style="margin-top:16px">Custom AI platforms designed around your process and built on the same record as everything else, so they work with your ERP, CRM, Books and HR from day one.</p>
 <a class="pill w" data-r href="#demo">Start a project</a>
 <div class="coins" id="coins">
-<div class="coin"><span><span><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c1.2-3.6 3.8-5.5 7-5.5s5.8 1.9 7 5.5"/></svg>AI agents</span></span></div>
-<div class="coin"><span><span><svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="6" rx="2"/><rect x="14" y="14" width="7" height="6" rx="2"/><path d="M6.5 10v4a3 3 0 0 0 3 3H14"/></svg>Workflows</span></span></div>
-<div class="coin"><span><span><svg viewBox="0 0 24 24"><path d="M9 7H6a4 4 0 0 0 0 8h3M15 7h3a4 4 0 0 1 0 8h-3M8 11h8"/></svg>Integrations</span></span></div>
+<figure class="cn"><div class="bob" style="--i:0"><div class="coin"><i class="e" style="--z:1"></i><i class="e" style="--z:2"></i><i class="e" style="--z:3"></i><i class="e" style="--z:4"></i><i class="e" style="--z:5"></i><i class="e" style="--z:6"></i><i class="e" style="--z:7"></i><i class="e" style="--z:8"></i><i class="e" style="--z:9"></i><i class="e" style="--z:10"></i><i class="e" style="--z:11"></i><i class="e" style="--z:12"></i><i class="e" style="--z:13"></i><i class="e" style="--z:14"></i><div class="face"><svg class="legend" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="lp0" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#lp0" textLength="490">PREMIUM AGENT • AI CALLING AGENT • HOF/ONE • </textPath></text></svg><div class="emb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.5 3.5h3l1.6 4.2-2.1 1.3a10.5 10.5 0 0 0 5.9 5.9l1.3-2.1 4.2 1.6v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"/><path d="M15 3a6.5 6.5 0 0 1 6 6M15 6.6a3 3 0 0 1 2.4 2.4"/></svg></div></div></div></div><figcaption><b>AI Calling Agent</b><span>Calls new leads, qualifies them and books the meeting.</span></figcaption></figure>
+<figure class="cn"><div class="bob" style="--i:1"><div class="coin"><i class="e" style="--z:1"></i><i class="e" style="--z:2"></i><i class="e" style="--z:3"></i><i class="e" style="--z:4"></i><i class="e" style="--z:5"></i><i class="e" style="--z:6"></i><i class="e" style="--z:7"></i><i class="e" style="--z:8"></i><i class="e" style="--z:9"></i><i class="e" style="--z:10"></i><i class="e" style="--z:11"></i><i class="e" style="--z:12"></i><i class="e" style="--z:13"></i><i class="e" style="--z:14"></i><div class="face"><svg class="legend" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="lp1" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#lp1" textLength="490">PREMIUM AGENT • WORKFLOW BUILDER • HOF/ONE • </textPath></text></svg><div class="emb"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3.5" width="7" height="5.5" rx="1.6"/><rect x="14" y="3.5" width="7" height="5.5" rx="1.6"/><rect x="8.5" y="15" width="7" height="5.5" rx="1.6"/><path d="M10 6.25h4M6.5 9v2.5a1.5 1.5 0 0 0 1.5 1.5h8a1.5 1.5 0 0 0 1.5-1.5V9M12 13v2"/></svg></div></div></div></div><figcaption><b>Workflow Builder</b><span>When something happens, the next step happens too.</span></figcaption></figure>
+<figure class="cn"><div class="bob" style="--i:2"><div class="coin"><i class="e" style="--z:1"></i><i class="e" style="--z:2"></i><i class="e" style="--z:3"></i><i class="e" style="--z:4"></i><i class="e" style="--z:5"></i><i class="e" style="--z:6"></i><i class="e" style="--z:7"></i><i class="e" style="--z:8"></i><i class="e" style="--z:9"></i><i class="e" style="--z:10"></i><i class="e" style="--z:11"></i><i class="e" style="--z:12"></i><i class="e" style="--z:13"></i><i class="e" style="--z:14"></i><div class="face"><svg class="legend" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="lp2" d="M100 100m-80 0a80 80 0 1 1 160 0a80 80 0 1 1-160 0"/></defs><text><textPath href="#lp2" textLength="490">PREMIUM AGENT • SPRING • AI IN YOUR CRM • HOF/ONE • </textPath></text></svg><div class="emb"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21v-8.5"/><path d="M12 12.5c0-4.6 3.2-7.6 8.5-7.6 0 5.2-3.2 7.6-8.5 7.6z"/><path d="M12 15c0-3.6-2.7-6-7.5-6 0 4.2 2.7 6 7.5 6z"/></svg></div></div></div></div><figcaption><b>Spring</b><span>The AI agent in your CRM that follows up and shows its work.</span></figcaption></figure>
 </div>
 </section>
 
@@ -534,7 +554,7 @@ function scrub(){if(RM)return;const vh=innerHeight;
  const r=shot.getBoundingClientRect(),k=clamp((vh-r.top)/(vh*.85));
  shot.style.setProperty('--rx',(14*(1-k)).toFixed(2)+'deg');shot.style.setProperty('--sc',(.86+.14*k).toFixed(4));
  const c=$('#coins').getBoundingClientRect(),q=clamp((vh-c.top)/(vh+c.height));
- coins.forEach((el,i)=>{el.style.setProperty('--ry',((q-.5)*(i===1?-70:70)).toFixed(1)+'deg');el.style.setProperty('--ty',(Math.sin(q*Math.PI*2+i)*10).toFixed(1)+'px')});
+ coins.forEach((el,i)=>{const r=(q-.5)*(i===1?-64:64)+(i-1)*6;el.style.setProperty('--ry',r.toFixed(1)+'deg');el.style.setProperty('--rx',(10-q*8).toFixed(1)+'deg');el.style.setProperty('--sh',(50+r*1.2).toFixed(1)+'%')});
  const p=pw.getBoundingClientRect(),g=clamp((vh-p.top)/(vh+p.height));pw.style.setProperty('--gs',(.8+.4*g).toFixed(3));
  const a=asc.getBoundingClientRect(),h=clamp((vh-a.top)/(vh+a.height));asc.style.setProperty('--ay',((.5-h)*60).toFixed(1)+'px')}
 const asc=$('.ascent');
