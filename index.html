@@ -62,7 +62,8 @@ p{margin:0}
 .drawer .pill{margin-top:24px;font-size:16px;height:52px}
 
 /* ---------- intro: background becomes a card ---------- */
-.intro{position:relative;height:100vh;height:100svh;min-height:680px;overflow:hidden;background:#000}
+.intro{position:relative;height:max(100vh,680px);height:max(100svh,680px);background:#fff}
+.istage{position:sticky;top:0;height:100vh;height:100svh;min-height:680px;overflow:hidden;background:#000}
 .sheet{position:absolute;inset:0;background:#fff;z-index:1;clip-path:inset(100% 4% 0% 4% round 40px);transition:clip-path 1.15s var(--move)}
 .go .sheet{clip-path:inset(0% 0% 0% 0% round 0px)}
 .photo{position:absolute;z-index:3;inset:0;overflow:hidden;background:#0d3b3c;clip-path:inset(0px 0px 0px 0px round 0px);transition:clip-path 1.15s var(--move);will-change:clip-path}
@@ -71,9 +72,9 @@ p{margin:0}
 .photo::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(0,0,0,.72),rgba(0,0,0,.15) 55%,rgba(0,0,0,0)),linear-gradient(0deg,rgba(0,0,0,.45),transparent 40%);transition:opacity 1s var(--ease)}
 .go .photo{clip-path:inset(var(--ct) var(--cr) var(--cb) var(--cl) round 28px)}
 .go .photo::after{opacity:.35}
-.hero{position:absolute;z-index:4;left:var(--g);top:calc(72px + clamp(32px,7vh,90px));color:#fff;max-width:min(880px,calc(100vw - 2*var(--g)));transition:opacity .5s,transform .9s var(--ease)}
-.hero h1{font-size:clamp(44px,5.3vw,80px);line-height:1.02}
-.hero .sub{color:rgba(255,255,255,.86);margin-top:24px;max-width:470px}
+.hero{position:absolute;z-index:4;left:var(--g);top:calc(72px + clamp(32px,7vh,90px));color:#fff;max-width:min(940px,calc(100vw - 2*var(--g)));transition:opacity .5s,transform .9s var(--ease)}
+.hero h1{font-size:clamp(24px,min(5.3vw,(100vw - 2*var(--g))/11.6),80px);line-height:1.02}.hero h1 .ln{white-space:nowrap}
+.hero .sub{color:rgba(255,255,255,.86);margin-top:24px;max-width:min(470px,calc(var(--sx,9999px) - var(--g) - 40px))}
 .hero .pill{margin-top:32px}
 .go .hero{opacity:0;transform:translateY(-40px);pointer-events:none}
 .ln{display:block;overflow:hidden;padding-bottom:.08em}.ln>span{display:block;animation:up 1.2s var(--ease) both}.ln:nth-child(2)>span{animation-delay:.1s}
@@ -325,7 +326,7 @@ p{margin:0}
 @keyframes toast{0%,8%{opacity:0;transform:translateY(-12px) scale(.96)}14%,62%{opacity:1;transform:none}70%,100%{opacity:0;transform:translateY(-12px) scale(.96)}}
 
 /* ---------- CRM features: sticky nav + prototype panels ---------- */
-.feat{position:relative;height:calc(var(--n)*62vh + 100vh);background:#FAFAFB;border-top:1px solid #EFEFF2}
+.feat{position:relative;height:calc(var(--n)*62vh + 100vh);background:#FAFAFB;border-top:1px solid #EFEFF2}.feat.done{height:100vh;min-height:680px}.feat.done .fs{position:relative}
 .fs{position:sticky;top:0;height:100vh;display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center;max-width:1280px;margin:0 auto;padding:72px var(--g) 0}
 .fl .ag-eb{margin-bottom:16px}
 .fl h2{font-size:clamp(32px,3vw,44px)}
@@ -664,7 +665,7 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 @media(max-width:760px){.cards{--cw:min(62vw,calc((100svh - 400px)*.74))}
 .frame{opacity:0;transition:opacity .5s .55s,box-shadow .6s}.go .frame{opacity:1}
 .photo::after{background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35) 55%,rgba(0,0,0,.55))}
-.hero{right:var(--g)}
+.hero{right:var(--g)}.hero .sub{max-width:470px}
 .screen{grid-template-columns:minmax(0,1fr);min-height:0}.caller{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}.wave{height:80px;margin:28px 0}
 .tpanel{grid-template-columns:minmax(0,1fr)}.tpanel .lead{min-height:0}
 .coins{gap:10px}.coin{--d:calc((100vw - 2*var(--g) - 20px)/3)}.cn:nth-child(2){margin-top:-16px}.cn figcaption{margin-top:16px}.cn figcaption b{font-size:14px}.cn figcaption span{display:none}.legend text{font-size:10px;letter-spacing:1.6px}
@@ -713,6 +714,7 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 <main>
 <!-- Intro: the full-bleed picture becomes the middle card on first scroll -->
 <section class="intro" id="top" aria-label="Introduction">
+<div class="istage">
 <div class="sheet"></div>
 <div class="after" id="after">
 <div class="t">
@@ -732,6 +734,7 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 <h1><span class="ln"><span>Building the next generation</span></span><span class="ln"><span>of intelligent products.</span></span></h1>
 <p class="sub fade" style="animation-delay:.3s">Premium AI-native software for businesses: CRM, Books and HRMS, with one communication channel called Mesh.</p>
 <a class="pill w fade" style="animation-delay:.45s" href="#demo">Book a demo</a>
+</div>
 </div>
 </section>
 
@@ -1101,7 +1104,7 @@ footer ul{list-style:none;margin:0;padding:0}footer li{padding:5px 0;font-size:1
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
-const B=document.body,hdr=$('#hdr'),intro=$('.intro'),slot=$('#slot');
+const B=document.body,hdr=$('#hdr'),intro=$('.istage'),slot=$('#slot');
 
 /* intro: measure the middle card so the photo lands exactly on it */
 const IMG=1333/2000;
@@ -1114,9 +1117,32 @@ const measure=()=>{const a=intro.getBoundingClientRect(),r=slot.getBoundingClien
  S.setProperty('--ts',k);S.setProperty('--tx',(sx+c.x-A.x)+'px');S.setProperty('--ty',(sy+c.y-A.y)+'px')};
 measure();addEventListener('resize',measure);document.fonts&&document.fonts.ready.then(measure);
 
-let go=false;
+/* first scroll gesture plays the photo-to-cards transition and nothing else;
+   the page only scrolls normally after it has finished */
+let go=false,lockT=0,lastW=0,ty0=null,tUsed=false;
+const setGo=g=>{if(g===go)return;go=g;B.classList.toggle('go',g);lockT=performance.now()+(RM?300:1150)};
+const locked=()=>performance.now()<lockT;
+const atTop=()=>scrollY<=2;
+addEventListener('wheel',e=>{const now=performance.now(),fresh=now-lastW>250;lastW=now;
+ if(locked()){e.preventDefault();lockT=Math.max(lockT,now+120);return}  /* swallow trackpad momentum */
+ if(!atTop()||Math.abs(e.deltaY)<1)return;
+ if(!go&&e.deltaY>0){e.preventDefault();setGo(true)}
+ else if(go&&e.deltaY<0&&fresh){e.preventDefault();setGo(false)}},{passive:false});
+addEventListener('touchstart',e=>{ty0=e.touches[0].clientY;tUsed=false},{passive:true});
+addEventListener('touchmove',e=>{if(ty0==null)return;const dy=ty0-e.touches[0].clientY;
+ if(tUsed||locked()){if(tUsed&&e.cancelable)e.preventDefault();return}
+ if(!atTop())return;
+ if(!go&&dy>8){tUsed=true;e.cancelable&&e.preventDefault();setGo(true)}
+ else if(go&&dy<-8){tUsed=true;e.cancelable&&e.preventDefault();setGo(false)}},{passive:false});
+addEventListener('touchend',()=>{ty0=null},{passive:true});
+addEventListener('keydown',e=>{if(e.target.closest&&e.target.closest('input,textarea,select,[contenteditable]'))return;
+ const dn=['ArrowDown','PageDown',' ','Spacebar'].includes(e.key),up=['ArrowUp','PageUp'].includes(e.key);
+ if(locked()&&(dn||up)){e.preventDefault();return}
+ if(!atTop())return;
+ if(!go&&dn){e.preventDefault();setGo(true)}else if(go&&up){e.preventDefault();setGo(false)}});
 const onScroll=()=>{const y=scrollY;
- const g=y>2;if(g!==go){go=g;B.classList.toggle('go',g)}
+ if(y>2&&!go)setGo(true);
+
  hdr.classList.toggle('solid',y>60);
  scrub()};
 addEventListener('scroll',onScroll,{passive:true});
@@ -1205,9 +1231,13 @@ const wide=()=>matchMedia('(min-width:901px)').matches;
 const set=i=>{if(i===cur)return;cur=i;lis.forEach((l,j)=>l.classList.toggle('on',j===i));pan.forEach((p,j)=>{if(j===i){p.classList.remove('on');void p.offsetWidth;p.classList.add('on')}else p.classList.remove('on')});
  const li=lis[i];requestAnimationFrame(()=>{bar.style.setProperty('--y',li.offsetTop+'px');bar.style.setProperty('--h',li.querySelector('button').offsetHeight+'px')})};
 const fitP=()=>{if(wide()){pan.forEach(p=>p.style.removeProperty('--fz'));return}pan.forEach(p=>p.style.setProperty('--fz',Math.min(1,p.clientWidth/660).toFixed(4)))};
-const upd=()=>{if(!wide()){fitP();pan.forEach(p=>p.classList.add('on'));return}const r=sec.getBoundingClientRect(),span=sec.offsetHeight-innerHeight;const k=clamp(-r.top/span);set(Math.min(n-1,Math.floor(k*n*0.999)))};
+let done=false;
+const upd=()=>{if(!wide()){fitP();pan.forEach(p=>p.classList.add('on'));return}if(done)return;const r=sec.getBoundingClientRect(),span=sec.offsetHeight-innerHeight;
+ /* walked all the way through once: collapse to one screen so scrolling back up just passes it */
+ if(r.bottom<=0){const h=sec.offsetHeight;done=true;set(n-1);sec.classList.add('done');scrollTo({top:scrollY-(h-sec.offsetHeight),behavior:'instant'});return}
+ const k=clamp(-r.top/span);set(Math.min(n-1,Math.floor(k*n*0.999)))};
 addEventListener('scroll',upd,{passive:true});addEventListener('resize',()=>{cur=-1;upd()});
-lis.forEach((l,i)=>l.querySelector('button').addEventListener('click',()=>{const span=sec.offsetHeight-innerHeight;scrollTo({top:sec.offsetTop+span*(i+.5)/n,behavior:RM?'auto':'smooth'})}));
+lis.forEach((l,i)=>l.querySelector('button').addEventListener('click',()=>{if(done){set(i);return}const span=sec.offsetHeight-innerHeight;scrollTo({top:sec.offsetTop+span*(i+.5)/n,behavior:RM?'auto':'smooth'})}));
 set(0);upd();setTimeout(()=>{cur=-1;upd()},400);
 }
 
